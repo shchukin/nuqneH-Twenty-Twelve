@@ -36,4 +36,7 @@ http://www.gnu.org/licenses/gpl-2.0.html
 @import url(../twentytwelve/style.css);
 
 
+.wp-post-image {
+	margin-top: 2rem;
+}
 
