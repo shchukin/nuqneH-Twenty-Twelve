@@ -6,7 +6,7 @@ function nuqneH_widgets_init() {
         'id' => 'content-top-1',
         'description' => __( 'This is area right above the content. Looks like it good place for breadcrumbs', 'nuqneH-Twenty-Twelve' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => "</div>",
+        'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
