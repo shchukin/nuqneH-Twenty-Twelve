@@ -32,6 +32,13 @@ function nuqneH_twentytwelve_scripts_styles() {
 		elseif ( 'vietnamese' == $subset )
 			$subsets .= ',vietnamese';
 
+		$protocol = is_ssl() ? 'https' : 'http';
+		$query_args = array(
+			'family' => 'Open+Sans:400italic,700italic,400,700',
+			'subset' => $subsets,
+		);
+		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+
 	}
 }
 
