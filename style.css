@@ -24,3 +24,11 @@ Template:    twentytwelve
 	padding-bottom: 1.571428571rem;
 	border-bottom: 1px solid #ededed;
 }
+
+.entry-header img.wp-post-image {
+    margin-bottom: 0;    
+}
+
+.breadcrumbs {
+    line-height: 1.714285714;
+}
