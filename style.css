@@ -32,3 +32,13 @@ Template:    twentytwelve
 .breadcrumbs {
     line-height: 1.714285714;
 }
+
+/* cause no border */
+.menu-toggle:active,
+.menu-toggle.toggled-on,
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+     margin: 3px;
+}
