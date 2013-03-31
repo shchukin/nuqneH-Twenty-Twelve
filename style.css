@@ -11,18 +11,42 @@ Template:    twentytwelve
 /* Import layout */
 @import url(../twentytwelve/style.css);
 
-
-.wp-post-image {
-	margin-top: 28px;
-	margin-top: 2rem;
-}
-
-.content-top {
+/* widgets area */
+.content-top-1 {
 	margin-bottom: 48px;
 	margin-bottom: 3.428571429rem;
 	padding-bottom: 22px;
 	padding-bottom: 1.571428571rem;
 	border-bottom: 1px solid #ededed;
+}
+
+.header-right-1 {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+@media screen and (min-width: 600px) {
+    
+    .header-right-1 {
+        position: absolute;
+        top: 26px;
+        right: 0;
+        width: 26.041666667%;
+        
+        margin: 0;
+        text-align: left;
+    }
+    
+}
+
+
+.site-header {
+    position: relative;    
+}
+
+.wp-post-image {
+	margin-top: 28px;
+	margin-top: 2rem;
 }
 
 .entry-header img.wp-post-image {
