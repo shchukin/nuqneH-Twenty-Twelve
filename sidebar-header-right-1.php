@@ -8,4 +8,4 @@ Template Name: Header Right 1
 	<div class="header-right-1">
 		<?php dynamic_sidebar( 'header-right-1' ); ?>
 	</div><!-- .header-right-1 -->
-<?php endif; // end content-top widget area ?>
+<?php endif; // end header-right-1 widget area ?>
