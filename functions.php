@@ -54,4 +54,7 @@ function nuqneH_twentytwelve_scripts_styles() {
 add_action( 'after_setup_theme', 'nuqneH_twentytwelve_scripts_styles' );
 
 
+/* adding excerpts to pages */
+add_post_type_support( 'page', 'excerpt' );
+
 ?>
