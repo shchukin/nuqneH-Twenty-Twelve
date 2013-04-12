@@ -41,7 +41,7 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 		
-		<?php get_sidebar('header-right-1'); ?>
+		<?php get_sidebar('header-right'); ?>
 		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>

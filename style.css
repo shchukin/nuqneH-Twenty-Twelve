@@ -12,7 +12,7 @@ Template:    twentytwelve
 @import url(../twentytwelve/style.css);
 
 /* widgets area */
-.content-top-1 {
+.content-top {
 	margin-bottom: 48px;
 	margin-bottom: 3.428571429rem;
 	padding-bottom: 22px;
@@ -20,14 +20,14 @@ Template:    twentytwelve
 	border-bottom: 1px solid #ededed;
 }
 
-.header-right-1 {
+.header-right {
     text-align: center;
     margin: 20px 0 0;
 }
 
 @media screen and (min-width: 600px) {
     
-    .header-right-1 {
+    .header-right {
         position: absolute;
         top: 26px;
         right: 0;

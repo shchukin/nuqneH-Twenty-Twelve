@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="site-content">
-		<?php get_sidebar('content-top-1'); ?>
+		<?php get_sidebar('content-top'); ?>
 		<div id="content" role="main">
 
 			<article id="post-0" class="post error404 no-results not-found">

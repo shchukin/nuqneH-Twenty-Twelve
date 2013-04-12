@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-		<?php get_sidebar('content-top-1'); ?>
+		<?php get_sidebar('content-top'); ?>
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>			

@@ -4,8 +4,8 @@
 
 function nuqneH_widgets_init() {
     register_sidebar( array(
-        'name' => __( 'Content top 1', 'nuqneH-Twenty-Twelve' ),
-        'id' => 'content-top-1',
+        'name' => __( 'Content top', 'nuqneH-Twenty-Twelve' ),
+        'id' => 'content-top',
         'description' => __( 'This area is right above the content. Looks like it is a good place for breadcrumbs', 'nuqneH-Twenty-Twelve' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -13,8 +13,8 @@ function nuqneH_widgets_init() {
         'after_title' => '</h3>',
     ) );
     register_sidebar( array(
-        'name' => __( 'Header Right 1', 'nuqneH-Twenty-Twelve' ),
-        'id' => 'header-right-1',
+        'name' => __( 'Header Right', 'nuqneH-Twenty-Twelve' ),
+        'id' => 'header-right',
         'description' => __( 'This area is in right top corner of header. I think it is a good place for rss button', 'nuqneH-Twenty-Twelve' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
