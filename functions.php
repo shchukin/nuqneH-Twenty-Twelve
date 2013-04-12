@@ -1,6 +1,6 @@
 <?php
 
-/* new widget area */
+/* new widget areas */
 
 function nuqneH_widgets_init() {
     register_sidebar( array(
