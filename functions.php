@@ -21,6 +21,15 @@ function nuqneH_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
+    register_sidebar( array(
+        'name' => __( 'Sticky Sidebar', 'nuqneH-Twenty-Twelve' ),
+        'id' => 'sticky-sidebar',
+        'description' => __( 'This is like original sidebar but sticky', 'nuqneH-Twenty-Twelve' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
 }
 
 add_action( 'widgets_init', 'nuqneH_widgets_init' );
@@ -56,5 +65,13 @@ add_action( 'after_setup_theme', 'nuqneH_twentytwelve_scripts_styles' );
 
 /* adding excerpts to pages */
 add_post_type_support( 'page', 'excerpt' );
+
+
+/* adding javascript */
+function nuqneH_add_script() {
+    wp_enqueue_script( 'nuqneh-main', get_stylesheet_directory_uri() . '/js/nuqneh-main.js', array('jquery') );  
+}    
+ 
+add_action( 'wp_enqueue_scripts', 'nuqneH_add_script' );
 
 ?>

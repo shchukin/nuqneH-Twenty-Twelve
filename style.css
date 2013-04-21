@@ -66,3 +66,9 @@ input[type="button"]:active,
 input[type="reset"]:active {
      margin: 3px;
 }
+
+/* sticky sidebar */
+.sticky-sidebar__detachable_sticked {
+    position: fixed;
+    top: 0;
+}
