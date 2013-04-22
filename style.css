@@ -72,3 +72,9 @@ input[type="reset"]:active {
     position: fixed;
     top: 0;
 }
+
+/* continue reading */
+.more-link {
+    margin-top: 1em;
+    display: inline-block;
+}
