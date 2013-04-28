@@ -17,12 +17,15 @@
 		<header class="entry-header">
 			
 			<?php if ( is_single() ) : ?>
-			     <h1 class="entry-title"><?php the_title(); ?></h1>
-			     <?php the_post_thumbnail(); ?>
+			    <h1 class="entry-title"><?php the_title(); ?></h1>
+			    <?php the_post_thumbnail(); ?>
 			<?php else : ?>
-    			<h1 class="entry-title">
-    				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-    			</h1>
+                <div class="categoried-title">
+                    <?php nuqneH_header_category(); ?>
+        			<h1 class="entry-title">
+        				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+        			</h1>
+                </div>
     			<?php the_post_thumbnail(); ?>
 			<?php endif; // is_single() ?>
 
@@ -40,16 +43,17 @@
 		<?php endif; ?>
 
 		<footer class="entry-meta">
-		    <?php if ( ! is_single() ) : ?>
-    			<?php if ( comments_open() ) : ?>
-    				<div class="comments-link">
-    					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-    				</div><!-- .comments-link -->
-    			<?php endif; // comments_open() ?>
-		    <?php endif; // is_single() ?>
-		
+
+			<?php if ( comments_open() ) : ?>
+				<span class="comments-link">
+					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
+				</span><!-- .comments-link -->
+			<?php endif; // comments_open() ?>
+
 			<?php twentytwelve_entry_meta(); ?>
+			
 			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
+			
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
 				<div class="author-info">
 					<div class="author-avatar">
@@ -66,5 +70,6 @@
 					</div><!-- .author-description -->
 				</div><!-- .author-info -->
 			<?php endif; ?>
+			
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->

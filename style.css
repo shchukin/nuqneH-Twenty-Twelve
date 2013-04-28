@@ -78,3 +78,31 @@ input[type="reset"]:active {
     margin-top: 1em;
     display: inline-block;
 }
+
+/* category hint before title */
+.categoried-title .header-category {
+    font-size: 9px;
+    position: relative; 
+    top: -4px;
+}
+    .categoried-title .header-category a { 
+        text-decoration: none; 
+    }
+    
+.categoried-title .entry-title {
+    display: inline; 
+}
+
+@media screen and (min-width: 960px) {
+
+    .categoried-title {
+        position: relative;
+    }
+        .categoried-title .header-category {
+            position: absolute;
+            right: 100%;
+            top: 14px;
+            margin-right: 3px;
+        }
+}
+
