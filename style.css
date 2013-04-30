@@ -13,11 +13,11 @@ Template:    twentytwelve
 
 /* widgets area */
 .content-top {
-	margin-bottom: 48px;
-	margin-bottom: 3.428571429rem;
-	padding-bottom: 22px;
-	padding-bottom: 1.571428571rem;
-	border-bottom: 1px solid #ededed;
+    margin-bottom: 48px;
+    margin-bottom: 3.428571429rem;
+    padding-bottom: 22px;
+    padding-bottom: 1.571428571rem;
+    border-bottom: 1px solid #ededed;
 }
 
 .header-right {
@@ -27,18 +27,18 @@ Template:    twentytwelve
 }
 
 @media screen and (min-width: 600px) {
-    
+
     .header-right {
         position: absolute;
         top: 26px;
         top: 1.8571428571rem;
         right: 0;
         width: 26.041666667%;
-        
+
         text-align: left;
         margin: 0;
     }
-    
+
 }
 
 
@@ -47,8 +47,8 @@ Template:    twentytwelve
 }
 
 .wp-post-image {
-	margin-top: 28px;
-	margin-top: 2rem;
+    margin-top: 28px;
+    margin-top: 2rem;
 }
 
 .entry-header img.wp-post-image {
@@ -85,7 +85,7 @@ input[type="reset"]:active {
 
 /* hint before the title */
 .hinted-title {
-    
+
 }
     .title-hint {
         display: inline-block;
@@ -108,7 +108,7 @@ input[type="reset"]:active {
             top: -4px;
             top: -0.2857142857rem;
         }
-          
+
 .hinted-title .entry-title {
     display: inline; 
 }

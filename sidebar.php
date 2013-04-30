@@ -10,9 +10,9 @@
  */
 ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sticky-sidebar' ) ) : ?>
-		<div id="secondary" class="widget-area" role="complementary">
-			<?php if ( is_active_sidebar( 'sidebar-1' ) ) dynamic_sidebar( 'sidebar-1' ); ?>
-			<?php if ( is_active_sidebar( 'sticky-sidebar' ) ) get_sidebar('sticky-sidebar'); ?>
-		</div><!-- #secondary -->
-	<?php endif; ?>
+    <?php if ( is_active_sidebar( 'sidebar-1' ) || is_active_sidebar( 'sticky-sidebar' ) ) : ?>
+        <div id="secondary" class="widget-area" role="complementary">
+            <?php if ( is_active_sidebar( 'sidebar-1' ) ) dynamic_sidebar( 'sidebar-1' ); ?>
+            <?php if ( is_active_sidebar( 'sticky-sidebar' ) ) get_sidebar('sticky-sidebar'); ?>
+        </div><!-- #secondary -->
+    <?php endif; ?>

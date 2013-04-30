@@ -47,26 +47,26 @@ add_action( 'widgets_init', 'nuqneH_widgets_init' );
 /* adding cyrillic to subset */
 
 function nuqneH_twentytwelve_scripts_styles() {
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
-		$subsets = 'latin,latin-ext,cyrillic,cyrillic-ext';
+    if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
+        $subsets = 'latin,latin-ext,cyrillic,cyrillic-ext';
 
-		$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
+        $subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
 
-		if ( 'cyrillic' == $subset )
-			$subsets .= ',cyrillic,cyrillic-ext';
-		elseif ( 'greek' == $subset )
-			$subsets .= ',greek,greek-ext';
-		elseif ( 'vietnamese' == $subset )
-			$subsets .= ',vietnamese';
+        if ( 'cyrillic' == $subset )
+            $subsets .= ',cyrillic,cyrillic-ext';
+        elseif ( 'greek' == $subset )
+            $subsets .= ',greek,greek-ext';
+        elseif ( 'vietnamese' == $subset )
+            $subsets .= ',vietnamese';
 
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => 'Open+Sans:400italic,700italic,400,700',
-			'subset' => $subsets,
-		);
-		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+        $protocol = is_ssl() ? 'https' : 'http';
+        $query_args = array(
+            'family' => 'Open+Sans:400italic,700italic,400,700',
+            'subset' => $subsets,
+        );
+        wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
-	}
+    }
 }
 
 add_action( 'after_setup_theme', 'nuqneH_twentytwelve_scripts_styles' );
@@ -80,7 +80,7 @@ add_post_type_support( 'page', 'excerpt' );
 function nuqneH_add_script() {
     wp_enqueue_script( 'nuqneh-main', get_stylesheet_directory_uri() . '/js/nuqneh-main.js', array('jquery') );  
 }    
- 
+
 add_action( 'wp_enqueue_scripts', 'nuqneH_add_script' );
 
 
@@ -98,7 +98,7 @@ function nuqneH_print_date( $format ) {
 /* Post footer */
 
 function twentytwelve_entry_meta() {
-  
+
     $tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
 
     $date = sprintf( '<time title="%1$s" class="entry-date" datetime="%2$s">%3$s</time>',
