@@ -23,6 +23,7 @@ Template:    twentytwelve
 .header-right {
     text-align: center;
     margin: 20px 0 0;
+    margin: 1.4285714285rem 0 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -30,6 +31,7 @@ Template:    twentytwelve
     .header-right {
         position: absolute;
         top: 26px;
+        top: 1.8571428571rem;
         right: 0;
         width: 26.041666667%;
         
@@ -58,13 +60,15 @@ Template:    twentytwelve
 }
 
 /* cause no border */
-.menu-toggle:active,
-.menu-toggle.toggled-on,
 button:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 input[type="reset"]:active {
      margin: 3px;
+}
+.menu-toggle:active,
+.menu-toggle.toggled-on {
+    margin: 1px;
 }
 
 /* sticky sidebar */
@@ -79,30 +83,48 @@ input[type="reset"]:active {
     display: inline-block;
 }
 
-/* category hint before title */
-.categoried-title .header-category {
-    font-size: 9px;
-    position: relative; 
-    top: -4px;
-}
-    .categoried-title .header-category a { 
-        text-decoration: none; 
-    }
+/* hint before the title */
+.hinted-title {
     
-.categoried-title .entry-title {
+}
+    .title-hint {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        top: 5px;
+        top: 0.357142857rem;
+    }
+        .title-hint a {
+            text-decoration: none;
+        }
+        .title-hint .just-a-date {
+            font-size: 8px;
+            font-size: 0.0267857142rem;
+        }
+        .title-hint .just-a-category {
+            font-size: 9px;
+            font-size: 0.6428571428rem;
+            position: relative;
+            top: -4px;
+            top: -0.2857142857rem;
+        }
+          
+.hinted-title .entry-title {
     display: inline; 
 }
 
 @media screen and (min-width: 960px) {
 
-    .categoried-title {
+    .hinted-title {
         position: relative;
     }
-        .categoried-title .header-category {
+        .title-hint {
             position: absolute;
             right: 100%;
-            top: 14px;
-            margin-right: 3px;
+            top: 0;
+            margin-right: 8px;
+            margin-right: 0.5714285714rem;
         }
+
 }
 

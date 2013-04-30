@@ -84,38 +84,41 @@ function nuqneH_add_script() {
 add_action( 'wp_enqueue_scripts', 'nuqneH_add_script' );
 
 
-/* Category hint to page title */
-function nuqneH_header_category() {
-    $header_category = get_the_category_list( __( ', ', 'twentytwelve' ) );
-    $header_category = '<span class="header-category">' . $header_category . '&nbsp;.</span>';
-    print $header_category;
+/* Just print the category */
+function nuqneH_print_category() {
+    print '<span class="just-a-category">' . get_the_category_list( __( ', ', 'twentytwelve' ) ) . '</span>';
 }
 
+/* Just print the date */
+function nuqneH_print_date( $format ) {
+    print '<span class="just-a-date">' . get_the_date( $format ) . '</span>' ;
+}
+
+
 /* Post footer */
-if ( ! function_exists( 'twentytwelve_entry_meta' ) ) {
-    function twentytwelve_entry_meta() {
-      
-    	$tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
-    
-    	$date = sprintf( '<time title="%1$s" class="entry-date" datetime="%2$s">%3$s</time>',
-    		esc_attr( get_the_time() ),
-    		esc_attr( get_the_date( 'c' ) ),
-    		esc_html( get_the_date('Y.m.d') )
-    	);
-    
-    	if ( $tag_list ) {
-    		$utility_text = __( '| %1$s | %2$s', 'twentytwelve' );
-    	} else {
-    		$utility_text = __( '| %1$s.', 'twentytwelve' );
-    	}
-    
-    	printf(
-    		$utility_text,
-    		$date,
-    		$tag_list
-    	);
-    	
+
+function twentytwelve_entry_meta() {
+  
+    $tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
+
+    $date = sprintf( '<time title="%1$s" class="entry-date" datetime="%2$s">%3$s</time>',
+        esc_attr( get_the_time() ),
+        esc_attr( get_the_date( 'c' ) ),
+        esc_html( get_the_date('Y.m.d') )
+    );
+
+    if ( $tag_list ) {
+        $utility_text = __( '%1$s | %2$s', 'twentytwelve' );
+    } else {
+        $utility_text = __( '%1$s.', 'twentytwelve' );
     }
+
+    printf(
+        $utility_text,
+        $date,
+        $tag_list
+    );
+
 }
 
 
