@@ -41,8 +41,6 @@ Template:    twentytwelve
 
 }
 
-* { color: blue; }
-
 .site-header {
     position: relative;    
 }
@@ -99,8 +97,8 @@ input[type="reset"]:active {
             text-decoration: none;
         }
         .title-hint .just-a-date {
-            font-size: 8px;
-            font-size: 0.0267857142rem;
+            font-size: 9px;
+            font-size: 0.6428571428rem;
         }
         .title-hint .just-a-category {
             font-size: 9px;
