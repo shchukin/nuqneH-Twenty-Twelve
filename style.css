@@ -41,7 +41,8 @@ Template:    twentytwelve
 
 }
 
-* { color: red; }
+* { color: blue; }
+
 .site-header {
     position: relative;    
 }
