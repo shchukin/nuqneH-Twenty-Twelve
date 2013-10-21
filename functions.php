@@ -84,41 +84,28 @@ function nuqneH_add_script() {
 add_action( 'wp_enqueue_scripts', 'nuqneH_add_script' );
 
 
-/* Just print the category */
-function nuqneH_print_category() {
-    print '<span class="just-a-category">' . get_the_category_list( __( ', ', 'twentytwelve' ) ) . '</span>';
+/* Just print the avatar */
+function nuqneH_print_post_avatar( $user, $size ) {
+    print '<div class="just-an-avatar">' . get_avatar( $user, $size ) . '</div>' ;
+}
+
+/* Just print the author */
+function nuqneH_print_post_author( $author ) {
+    print '<div class="just-an-author">' . get_the_author_meta( 'nickname', $author ) . '</div>' ;
 }
 
 /* Just print the date */
-function nuqneH_print_date( $format ) {
-    print '<span class="just-a-date">' . get_the_date( $format ) . '</span>' ;
+function nuqneH_print_post_date() {
+    /* translators: 1: date, 2: time */
+    printf( __('<div class="just-a-date"> %1$s at %2$s </div>'),  get_the_date(),  get_the_time() );
 }
 
 
 /* Post footer */
 
 function twentytwelve_entry_meta() {
-
-    $tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
-
-    $date = sprintf( '<time title="%1$s" class="entry-date" datetime="%2$s">%3$s</time>',
-        esc_attr( get_the_time() ),
-        esc_attr( get_the_date( 'c' ) ),
-        esc_html( get_the_date('Y.m.d') )
-    );
-
-    if ( $tag_list ) {
-        $utility_text = __( '%1$s | %2$s', 'twentytwelve' );
-    } else {
-        $utility_text = __( '%1$s.', 'twentytwelve' );
-    }
-
-    printf(
-        $utility_text,
-        $date,
-        $tag_list
-    );
-
+    //nothing more than tags :)
+    print get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
 }
 
 

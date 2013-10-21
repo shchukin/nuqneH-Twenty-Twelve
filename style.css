@@ -82,48 +82,38 @@ input[type="reset"]:active {
     display: inline-block;
 }
 
-/* hint before the title */
-.hinted-title {
 
+/* entry hint */
+
+.just-an-avatar,
+.just-an-avatar .avatar {
+    display: inline-block;
+    vertical-align: top;
 }
-    .title-hint {
-        display: inline-block;
-        text-align: center;
-        position: relative;
-        top: 5px;
-        top: 0.357142857rem;
+
+
+.entry-hint { 
+    position: relative; 
+    padding: 0 0 0 85px; margin: 0 0 40px;
+    min-height: 44px;
+}
+
+    .entry-hint .just-an-avatar { 
+        position: absolute;
+        left: 0;
+        top: 0;
     }
-        .title-hint a {
-            text-decoration: none;
-        }
-        .title-hint .just-a-date {
-            font-size: 9px;
-            font-size: 0.6428571428rem;
-        }
-        .title-hint .just-a-category {
-            font-size: 9px;
-            font-size: 0.6428571428rem;
-            position: relative;
-            top: -4px;
-            top: -0.2857142857rem;
-        }
 
-.hinted-title .entry-title {
-    display: inline; 
-}
-
-@media screen and (min-width: 960px) {
-
-    .hinted-title {
-        position: relative;
+    .entry-hint .just-an-author { 
+        font-size: 15px; 
+        line-height: 21px;
+        font-weight: bold;
     }
-        .title-hint {
-            position: absolute;
-            right: 100%;
-            top: 0;
-            margin-right: 8px;
-            margin-right: 0.5714285714rem;
-        }
-
-}
-
+    .entry-hint .just-a-date { 
+        font-size: 12px; 
+        line-height: 20px; 
+        color: #5e5e5e;
+    }  
+    .entry-hint .just-a-category { 
+        font-size: 10px; line-height: 11px; 
+    }  

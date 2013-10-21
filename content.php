@@ -15,22 +15,27 @@
         </div>
         <?php endif; ?>
         <header class="entry-header">
-                        
+                    
+            <div class="entry-hint">
+                <?php nuqneH_print_post_author($post->post_author); ?>
+                <?php nuqneH_print_post_avatar($post->post_author,44); ?>
+                <?php nuqneH_print_post_date(); ?>
+            </div>
+
+            <h1 class="entry-title">
             <?php if ( is_single() ) : ?>
-                <h1 class="entry-title"><?php the_title(); ?></h1>
+                <?php the_title(); ?></h1>
+            <?php else : ?>
+                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+            <?php endif; // is_single() ?>
+            </h1>
+            
+
+            <?php if ( is_single() ) : ?>
                 <?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
             <?php else : ?>
-                <div class="hinted-title">
-                    <span class="title-hint">
-                        <?php nuqneH_print_date('y.m'); ?><br>
-                        <?php nuqneH_print_category(); ?>
-                    </span>
-                    <h1 class="entry-title">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Перейти к %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-                    </h1>
-                </div>
                 <?php if ( has_post_thumbnail() ) : ?>
-                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Перейти к %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
                         <?php the_post_thumbnail(); ?>
                     </a>
                 <?php endif; // has_post_thumbnail() ?>
