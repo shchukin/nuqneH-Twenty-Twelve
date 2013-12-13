@@ -11,9 +11,10 @@
  */
 ?>
     </div><!-- #main .wrapper -->
-    <?php if ( is_active_sidebar( 'footer' ) ) : ?>
-        <footer id="colophon" role="contentinfo">
-            <?php get_sidebar('footer'); ?>
+    <?php if ( is_active_sidebar( 'footer-left' ) ) : ?>
+        <footer id="colophon" class="clearfix" role="contentinfo">
+            <?php get_sidebar('footer-right'); ?>
+            <?php get_sidebar('footer-left'); ?>
         </footer><!-- #colophon -->
     <?php endif; // end footer widget area ?>
 </div><!-- #page -->

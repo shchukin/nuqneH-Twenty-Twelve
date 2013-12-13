@@ -11,6 +11,25 @@ Template:    twentytwelve
 /* Import layout */
 @import url(../twentytwelve/style.css);
 
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
 /* widgets area */
 .content-top {
     margin-bottom: 48px;
@@ -56,6 +75,19 @@ Template:    twentytwelve
 
 .breadcrumbs {
     line-height: 1.714285714;
+}
+
+
+
+@media screen and (min-width: 1100px) { 
+    .footer-left {
+        float: left;
+    }
+
+    .footer-right {
+        text-align: right;
+        float: right;
+    }
 }
 
 /* cause no border */

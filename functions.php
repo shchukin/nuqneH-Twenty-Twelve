@@ -22,9 +22,18 @@ function nuqneH_widgets_init() {
         'after_title' => '</h3>',
     ) );
     register_sidebar( array(
-        'name' => __( 'Footer', 'nuqneH-Twenty-Twelve' ),
-        'id' => 'footer',
-        'description' => __( 'Footer area. An all footer will be visible if contains wiget', 'nuqneH-Twenty-Twelve' ),
+        'name' => __( 'Footer Left', 'nuqneH-Twenty-Twelve' ),
+        'id' => 'footer-left',
+        'description' => __( 'Primary footer area', 'nuqneH-Twenty-Twelve' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => __( 'Footer Right', 'nuqneH-Twenty-Twelve' ),
+        'id' => 'footer-right',
+        'description' => __( 'Additional footer area at right corner', 'nuqneH-Twenty-Twelve' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',
